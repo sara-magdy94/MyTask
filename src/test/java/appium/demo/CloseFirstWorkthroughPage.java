@@ -33,7 +33,6 @@ File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
-
 		WebElement TextinFirstWorkthrough =   driver.findElement(By.xpath("//*[contains(@text,'Check tasks progress at any given time and anywhere through the app.')]"));
 		String Text1 = TextinFirstWorkthrough.getText();
 		System.out.println("first page text is : "+ Text1);
