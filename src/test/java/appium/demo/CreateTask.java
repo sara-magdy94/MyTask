@@ -32,7 +32,6 @@ File app = new File ("D:\\New folder\\eclipse workspace\\demo\\app\\TaskedIn_qc1
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		//caps.setCapability("browserName", "Chrome"); //incase of web
 
-
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 

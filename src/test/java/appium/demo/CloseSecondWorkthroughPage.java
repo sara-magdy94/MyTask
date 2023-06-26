@@ -28,7 +28,7 @@ File app = new File ("D:\\New folder\\eclipse workspace\\demo\\app\\TaskedIn_qc1
 		caps.setCapability("platformVersion", "7.1.1");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-	
+
 
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

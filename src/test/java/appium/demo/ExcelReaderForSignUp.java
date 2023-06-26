@@ -25,7 +25,7 @@ public FileInputStream getFileInputStream() {
 		System.exit(0);
 	}
 	return fis;
-	
+
 }
 
 public Object [][] getExcelData() throws IOException{

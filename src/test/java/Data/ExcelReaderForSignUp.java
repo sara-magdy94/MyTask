@@ -24,8 +24,7 @@ public FileInputStream getFileInputStream() {
 		System.out.println("Test data file not found, terminating process: check file path of test data");
 		System.exit(0);
 	}
-	return fis;
-	
+	return fis;	
 }
 
 public Object [][] getExcelData(String sheetName) throws IOException{
