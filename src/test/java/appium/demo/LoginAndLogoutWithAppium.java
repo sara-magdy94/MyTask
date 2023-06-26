@@ -64,7 +64,7 @@ public static Object[][ ] UserRegisterData() throws IOException{
 return ER.getExcelData("SignIn");
 //	
 }
-	@Test(priority=2,alwaysRun=true,dataProvider = "ExcelData")
+@Test(priority=2,alwaysRun=true,dataProvider = "ExcelData")
 	public void openApplication() throws MalformedURLException, InterruptedException {
 ////		
 ////		AppiumDriverLocalService service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))

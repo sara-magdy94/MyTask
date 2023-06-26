@@ -45,7 +45,6 @@ public class SignUpAsEmployeeWithCompany {
 		
 	}
 
-
 	@Test(priority=1,alwaysRun=true,dataProvider = "SignUpData")
 	public void DataOfApplication(String companyNameBtn,String chooseCompanyNameBtn , String fullNameAdminBtn ,String JobTitleBtn , String PhoneBtn2 , String rePhoneBtn2  , String Email , String Passwd , String Re_passwd ,String Re_passwd2) throws MalformedURLException, InterruptedException {
 	

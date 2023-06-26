@@ -24,7 +24,6 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 public class SignUpAsEmployeeWithUserWithoutCodeManger {
-
 	protected  AppiumDriver<WebElement> driver;	
 	@Test
 	public void SignUpAsUser() throws MalformedURLException, InterruptedException {

@@ -29,7 +29,6 @@ File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		//caps.setCapability("browserName", "Chrome"); //incase of web
-
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 

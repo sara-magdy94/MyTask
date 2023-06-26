@@ -48,7 +48,6 @@ public class TestingAndroidAppUsingTestNG {
 		
 	}
 
-
 	@Test(priority=2,alwaysRun=true,dataProvider = "ExcelData")
 	public void DataOfApplication(String companyName , String phone , String password ) throws MalformedURLException, InterruptedException {
 		File app = new File ("TaskedIn_qc1295501502971117063.apk");
