@@ -48,14 +48,14 @@ public class SignUpAsEmployeeWithCompany {
 	@Test(priority=1,alwaysRun=true,dataProvider = "SignUpData")
 	public void DataOfApplication(String companyNameBtn,String chooseCompanyNameBtn , String fullNameAdminBtn ,String JobTitleBtn , String PhoneBtn2 , String rePhoneBtn2  , String Email , String Passwd , String Re_passwd ,String Re_passwd2) throws MalformedURLException, InterruptedException {
 	
-	File app = new File ("D:\\New folder\\eclipse workspace\\demo\\app\\TaskedIn_qc1295501502971117063.apk");
+		File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
 //	File app = new File ("TaskedIn_qc1295501502971117063.apk");
 
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
-		caps.setCapability("platformVersion", "7.1.1");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
+		caps.setCapability("platformVersion", "11.0");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

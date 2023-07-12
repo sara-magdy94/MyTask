@@ -76,7 +76,7 @@ return ER.getExcelData("SignIn");
 
 	DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
-	caps.setCapability("platformVersion", "7.1.1");		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
+	caps.setCapability("platformVersion", "7.1.1");		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 //		caps.setCapability(SystemPortcapability.SYSTEM_PORT,"XXXX");
   caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 ////		//incase we don't have apk for app

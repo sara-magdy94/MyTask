@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appium.demo.LoginAndLogoutWithAppium">
+      <class name="appium.demo.SignUpAsEmployeeWithCompany">
         <methods>
-          <include name="DataOfApplication" invocation-numbers="0 1 2 3 4 5"/>
-          <include name="openApplication"/>
+          <include name="DataOfApplication" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- appium.demo.LoginAndLogoutWithAppium -->
+      </class> <!-- appium.demo.SignUpAsEmployeeWithCompany -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

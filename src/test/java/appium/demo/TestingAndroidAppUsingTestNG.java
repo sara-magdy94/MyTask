@@ -56,7 +56,7 @@ public class TestingAndroidAppUsingTestNG {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "7.1.1");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
 

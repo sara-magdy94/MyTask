@@ -1,14 +1,18 @@
 package appium.demo;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
@@ -19,17 +23,31 @@ public class CloseFirstWorkthroughPage {
 	
 	
 	protected  AppiumDriver<WebElement> driver;	
+	protected FileInputStream inputStream;
+	protected Properties prop;
+	
+	
+	@Parameters({"deviceName", "platformName" , "platformVersion"})
 	@Test
-	public void openApplication() throws MalformedURLException, InterruptedException {
-File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
+	public void beforeClass(String deviceName , String platformName , String platformVersion ) throws Exception {
+		
+		
+		
+		File propFile = new File ("src/test/resources/config/config.properties");
+		inputStream = new FileInputStream(propFile);
+		prop = new Properties();
+		prop.load(inputStream);
+		
+		File androidApp = new File(prop.getProperty("androidAppPath"));
 
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("platformName", "Android");
-		caps.setCapability("platformVersion", "7.1.1");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
-		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+		caps.setCapability("platformName", platformName);
+		caps.setCapability("platformVersion", platformVersion);
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
+		caps.setCapability(MobileCapabilityType.APP, androidApp.getAbsolutePath());
 		//caps.setCapability("browserName", "Chrome"); //incase of web
-		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
+		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL(prop.getProperty("appiumServerLink")), caps);
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 
@@ -42,6 +60,18 @@ File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
 			WebElement closeFirstWorkthrough =   driver.findElement(By.id("com.megatrust.taskedin.qc:id/close_mbtn"));
 			closeFirstWorkthrough.click();
 		System.out.println("first page could be closed ");
-
+		
 	}
+	
+	
+	
+	
+	
+	
+	//@Test
+//	public void openApplication() throws MalformedURLException, InterruptedException {
+
+		
+
+	//}
 }

@@ -21,12 +21,12 @@ public class CloseSecondWorkthroughPage {
 	protected  AppiumDriver<WebElement> driver;	
 	@Test
 	public void openApplication() throws MalformedURLException, InterruptedException {
-File app = new File ("D:\\New folder\\eclipse workspace\\demo\\app\\TaskedIn_qc1295501502971117063.apk");
+		File app = new File ("app\\TaskedIn_qc1295501502971117063.apk");
 
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
-		caps.setCapability("platformVersion", "7.1.1");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
+		caps.setCapability("platformVersion", "11.0");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
 

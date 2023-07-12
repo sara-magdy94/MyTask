@@ -40,7 +40,7 @@ File app = new File ("D:\\New folder\\eclipse workspace\\demo\\app\\TaskedIn_qc1
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "7.1.1");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus6p");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		//caps.setCapability("browserName", "Chrome"); //incase of web
 
