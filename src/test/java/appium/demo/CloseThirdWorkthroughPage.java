@@ -33,6 +33,7 @@ public class CloseThirdWorkthroughPage {
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+		
 
 		WebElement TextinFirstWorkthrough =   driver.findElement(By.xpath("//*[contains(@text,'Check tasks progress at any given time and anywhere through the app.')]"));
 		String Text1 = TextinFirstWorkthrough.getText();

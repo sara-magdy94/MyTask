@@ -29,6 +29,7 @@ public class CloseSecondWorkthroughPage {
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 (11)");
 		caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
+		
 
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

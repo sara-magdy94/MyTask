@@ -70,6 +70,7 @@ public class TestingAndroidAppUsingTestNG {
 	System.out.println("first page could be closed ");
 	
 		
+	
 //		
 //		Wait <AndroidDriver> wait = new FluentWait <AndroidDriver> (driver)
 //		.pollingEvery(Duration.ofSeconds(40))

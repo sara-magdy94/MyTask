@@ -33,6 +33,7 @@ public class CloseFirstWorkthroughPage {
 		
 		
 		
+		
 		File propFile = new File ("src/test/resources/config/config.properties");
 		inputStream = new FileInputStream(propFile);
 		prop = new Properties();

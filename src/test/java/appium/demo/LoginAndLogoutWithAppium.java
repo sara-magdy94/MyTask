@@ -62,6 +62,7 @@ public static Object[][ ] UserRegisterData() throws IOException{
 //	
 return ER.getExcelData("SignIn");
 //	
+
 }
 @Test(priority=2,alwaysRun=true,dataProvider = "ExcelData")
 	public void openApplication() throws MalformedURLException, InterruptedException {
